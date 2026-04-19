@@ -7,7 +7,7 @@ The design is built from Meelu Padhi, Ravindra Chaudhari, "An Optimized Pipeline
 
 ## Key Features
 - **Architecture:** An optimized pipelined architecture of SHA-256 hash function with 32-bit Data Path and Address Space.
-- **Modularity:** Hierarchical design including Expander Block, Compresser Block and Control Unit.
+- **Modularity:** Hierarchical design including Expander Block, Compressor Block and Control Unit.
 - **Completeness:** Includes all source codes (`src`) and testbenches (`tests`) for verification.
 
 ## Project Structure
