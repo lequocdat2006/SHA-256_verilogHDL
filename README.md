@@ -12,7 +12,7 @@ The design is built from Meelu Padhi, Ravindra Chaudhari, "An Optimized Pipeline
 
 ## Project Structure
 ```
-custom-16bit-cpu/
+SHA-256_verilogHDL/
 ├── src/          # Source code for all modules
 ├── tests/        # Testbenches and simulation files
 ├── AUTHORS.md    # List of project contributors and supervisor
