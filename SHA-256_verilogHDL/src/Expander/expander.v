@@ -3,7 +3,7 @@ module expander(W, M, Sel, CLK);
   input Sel, CLK;
   output [31:0] W;
   
-  wire [31:0] oR1, sum, osig0, osig1, oCSkA1, oCSkA2, oCSkA3, oCSkA4, sum1, sum2;
+  wire [31:0] oR1, sum, osig0, osig1, oCSkA1, oCSkA2, oCSkA3, oCSkA4, sum1, sum2, oCSkA5, oCSkA6;
   
   mux2to132bit muxexpander(oR1, M, sum, Sel);
   regfileshift16 regfileexpander(W, osig0, osig1, oCSkA1, oCSkA2, oR1, CLK);
