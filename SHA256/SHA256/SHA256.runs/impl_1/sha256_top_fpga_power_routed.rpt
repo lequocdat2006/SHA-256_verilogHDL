@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Sun Apr 26 15:35:22 2026
+| Date             : Sun Apr 26 17:21:33 2026
 | Host             : Dephyrus running 64-bit major release  (build 9200)
 | Command          : report_power -file sha256_top_fpga_power_routed.rpt -pb sha256_top_fpga_power_summary_routed.pb -rpx sha256_top_fpga_power_routed.rpx
 | Design           : sha256_top_fpga
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.348        |
+| Total On-Chip Power (W)  | 0.360        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.059        |
+| Dynamic (W)              | 0.071        |
 | Device Static (W)        | 0.289        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 84.2         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.013 |        3 |       --- |             --- |
-| CLB Logic      |     0.019 |     7416 |       --- |             --- |
-|   LUT as Logic |     0.017 |     3293 |    117120 |            2.81 |
-|   CARRY8       |    <0.001 |       72 |     14640 |            0.49 |
-|   Register     |    <0.001 |     3043 |    234240 |            1.30 |
+| Clocks         |     0.014 |        3 |       --- |             --- |
+| CLB Logic      |     0.024 |     7414 |       --- |             --- |
+|   LUT as Logic |     0.022 |     3292 |    117120 |            2.81 |
+|   CARRY8       |     0.001 |       72 |     14640 |            0.49 |
+|   Register     |    <0.001 |     3042 |    234240 |            1.30 |
 |   Others       |     0.000 |       11 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |       96 |    117120 |            0.08 |
-| Signals        |     0.022 |     4783 |       --- |             --- |
-| I/O            |     0.005 |       26 |       189 |           13.76 |
+| Signals        |     0.027 |     4774 |       --- |             --- |
+| I/O            |     0.006 |       26 |       189 |           13.76 |
 | Static Power   |     0.289 |          |           |                 |
-| Total          |     0.348 |          |           |                 |
+| Total          |     0.360 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.720 |     0.142 |       0.075 |      0.068 |       NA    | Unspecified | NA         |
+| Vccint           |       0.720 |     0.158 |       0.090 |      0.068 |       NA    | Unspecified | NA         |
 | Vccint_io        |       0.850 |     0.036 |       0.000 |      0.035 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.077 |       0.000 |      0.077 |       NA    | Unspecified | NA         |
@@ -146,7 +146,7 @@ Table of Contents
 +---------+--------+-----------------+
 | Clock   | Domain | Constraint (ns) |
 +---------+--------+-----------------+
-| sys_clk | clk    |             5.0 |
+| sys_clk | clk    |             4.0 |
 +---------+--------+-----------------+
 
 
@@ -159,13 +159,13 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| sha256_top_fpga |     0.059 |
-|   u_core        |     0.052 |
+| sha256_top_fpga |     0.071 |
+|   u_core        |     0.063 |
 |     u_comp      |     0.005 |
-|     u_ctrl      |     0.015 |
-|     u_ff        |     0.003 |
-|     u_ms        |     0.005 |
-|     u_padding   |     0.014 |
+|     u_ctrl      |     0.018 |
+|     u_ff        |     0.004 |
+|     u_ms        |     0.007 |
+|     u_padding   |     0.018 |
 +-----------------+-----------+
 
 

@@ -54,8 +54,8 @@ module compression_round_core (
 
     assign Sum1 = H + sig1_out;                                      // H + Σ1(E)
     assign Sum2 = ch_out + Kt;                                       // Ch + Kt
-    assign U_t  = Sum1 + Sum2;                                       // H + Σ1 + Ch + Kt
-    assign T1   = U_t + Wt;                                          // H + Σ1 + Ch + Kt + Wt
+    assign U_t  = Wt + Sum2;                                       // Wt + Ch + Kt
+    assign T1   = U_t + Sum1;                                          // H + Σ1 + Ch + Kt + Wt
     assign V_t  = T1;                                                // debug giữ nguyên tên cũ
     assign T2   = sig0_out + maj_out;                                // Σ0(A) + Maj(A,B,C)
     assign Sum3 = T1 + T2;                                           // A_next

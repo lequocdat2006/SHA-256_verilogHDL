@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Sun Apr 26 15:29:56 2026
-# Process ID         : 2056
+# Start of session at: Sun Apr 26 17:14:47 2026
+# Process ID         : 17960
 # Current directory  : C:/Users/nguye/Documents/Y2-2/CE213/SHA256/SHA256/SHA256.runs/impl_1
 # Command line       : vivado.exe -log sha256_top_fpga.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sha256_top_fpga.tcl -notrace
 # Log file           : C:/Users/nguye/Documents/Y2-2/CE213/SHA256/SHA256/SHA256.runs/impl_1/sha256_top_fpga.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 16422 MB
 # Swap memory        : 33285 MB
 # Total Virtual      : 49708 MB
-# Available Virtual  : 12096 MB
+# Available Virtual  : 5196 MB
 #-----------------------------------------------------------
 source sha256_top_fpga.tcl -notrace
