@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Apr 26 15:33:41 2026
+| Host         : Dephyrus running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file sha256_top_fpga_control_sets_placed.rpt
+| Design       : sha256_top_fpga
+| Device       : xck26
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    78 |
+|    Minimum number of control sets                        |    78 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    17 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    78 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |    63 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               3 |            3 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            3040 |          517 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------------------+-------------------+------------------+----------------+--------------+
+|  Clock Signal  |                     Enable Signal                     |  Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------------------------------+-------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                                       | rst_n_IBUF_inst/O |                3 |              3 |         1.00 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[2]_rep__0_4[0] | rst_n_IBUF_inst/O |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | u_core/u_padding/out_valid_i_1_n_0                    | rst_n_IBUF_inst/O |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/FSM_sequential_state[1]_i_1_n_0      | rst_n_IBUF_inst/O |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[0]_rep__2_0    | rst_n_IBUF_inst/O |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[62][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[38][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[58][7]_i_1_n_0                | rst_n_IBUF_inst/O |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[20][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[1][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[16][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[24][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[28][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[2][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[31][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[32][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[33][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[34][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[21][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[0][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[22][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[35][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[36][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[37][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[13][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[18][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[15][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[26][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[12][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[27][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[11][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[14][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[10][7]_i_1_n_0                | rst_n_IBUF_inst/O |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[25][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[23][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[29][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[19][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[30][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[17][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[4][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[54][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[59][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[48][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[6][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[52][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[42][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[46][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[7][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[61][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[53][7]_i_1_n_0                | rst_n_IBUF_inst/O |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[8][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[3][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[9][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[47][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[40][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[45][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[55][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[43][7]_i_1_n_0                | rst_n_IBUF_inst/O |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[39][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[49][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[44][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[50][7]_i_1_n_0                | rst_n_IBUF_inst/O |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[41][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[51][7]_i_1_n_0                | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[57][7]_i_1_n_0                | rst_n_IBUF_inst/O |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[5][7]_i_1_n_0                 | rst_n_IBUF_inst/O |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[60][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_padding/buffer[56][7]_i_1_n_0                | rst_n_IBUF_inst/O |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state[2]_i_1_n_0         | rst_n_IBUF_inst/O |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[1]_rep__2_0[0] | rst_n_IBUF_inst/O |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_core/u_padding/second_block_reg[511]_i_1_n_0        | rst_n_IBUF_inst/O |               49 |             62 |         1.27 |
+|  clk_IBUF_BUFG | u_core/u_padding/byte_cnt[5]_i_1_n_0                  | rst_n_IBUF_inst/O |               20 |             83 |         4.15 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[2]_rep__0_3[0] | rst_n_IBUF_inst/O |               84 |            256 |         3.05 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/E[0]                                    | rst_n_IBUF_inst/O |               72 |            256 |         3.56 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/digest_byte_cnt[0]                      | rst_n_IBUF_inst/O |               90 |            262 |         2.91 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[1]_rep__2_1[0] | rst_n_IBUF_inst/O |               96 |            512 |         5.33 |
+|  clk_IBUF_BUFG | u_core/u_padding/out_block[511]_i_1_n_0               | rst_n_IBUF_inst/O |              249 |            512 |         2.06 |
+|  clk_IBUF_BUFG | u_core/u_ctrl/FSM_sequential_state_reg[0]_rep__6_1[0] | rst_n_IBUF_inst/O |              231 |            513 |         2.22 |
++----------------+-------------------------------------------------------+-------------------+------------------+----------------+--------------+
+
+
