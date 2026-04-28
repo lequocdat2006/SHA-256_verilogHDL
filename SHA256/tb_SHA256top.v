@@ -3,7 +3,7 @@
 module sha256_top_tb;
 
     // --- Tham số và Tín hiệu ---
-    parameter CLK_PERIOD = 10;
+    parameter CLK_PERIOD = 4;
     parameter FILE_PATH  = "D:/Vivado/SHA256/tb_input.txt";
 
     reg          clk, rst_n, in_valid, msg_start, msg_end;
